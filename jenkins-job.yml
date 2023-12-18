@@ -1,0 +1,6 @@
+- name: jenkins job configuration
+  hosts: all
+  become: true
+  connection: local
+  roles:
+    - jenkins-jobs
