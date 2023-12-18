@@ -2,5 +2,8 @@
   hosts: localhost
   become: true
   connection: local
+  vars:
+    jobs:
+      - roboshop-terraform
   roles:
     - jenkins-jobs
