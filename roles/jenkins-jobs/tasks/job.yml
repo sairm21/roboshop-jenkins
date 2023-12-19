@@ -1,6 +1,6 @@
 - name: Create a jenkins job using basic authentication
   community.general.jenkins_job:
-    config: "{{ lookup('file', 'templates/pipeline.xml') }}"
+    config: "{{ lookup('template', 'templates/pipeline.xml') }}"
     name: test
     user: sairam
     password: S@ir&m1221
