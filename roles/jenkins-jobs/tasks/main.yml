@@ -1,4 +1,4 @@
 - name: Include jenkins jobs in play
   ansible.builtin.include_tasks:
     file: job.yml
-  loop: "{{jenkins-job}}"
+  loop: "{{job}}"
