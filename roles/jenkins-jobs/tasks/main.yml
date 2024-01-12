@@ -1,4 +1,9 @@
-- name: Include jenkins jobs in play
+- name: Include jenkins single branch pipeline jobs in play
   ansible.builtin.include_tasks:
-    file: job.yml
-  loop: "{{ jobs }}" #variable defined in jenkins-job.yml
+    file: Sp_jobs.yml
+  loop: "{{ Sp_jobs }}" #variable defined in jenkins-job.yml
+
+- name: Include jenkins multi branch pipeline jobs in play
+  ansible.builtin.include_tasks:
+    file: Mp_jobs.yml
+  loop: "{{ Mp_jobs }}" #variable defined in jenkins-job.yml

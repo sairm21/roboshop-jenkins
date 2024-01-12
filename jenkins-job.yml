@@ -3,8 +3,9 @@
   become: true
   connection: local
   vars:
-    jobs:
+    Sp_jobs:
       - roboshop-terraform
+    Mp_jobs:
       - cart
       - catalogue
       - dispatch
