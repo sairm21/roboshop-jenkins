@@ -3,7 +3,7 @@ def call() {
 
              if (env.cibuild == "java") {
                 stage('Build') {
-                         sh "npm i"
+                         sh "mvn package"
                  }
             }
 
