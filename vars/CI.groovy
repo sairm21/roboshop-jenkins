@@ -27,9 +27,10 @@ def call() {
                      echo "security scans"
              }
 
-        if (env.TAG_NAME ==~ ".*")
-        stage('Publish a Artifact') {
+        if (env.TAG_NAME ==~ ".*"){
+            stage('Publish a Artifact') {
                 echo "publish artifacts"
-             }
+            }
+        }
         }
     }
