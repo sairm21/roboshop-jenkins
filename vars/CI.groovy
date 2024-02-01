@@ -49,7 +49,7 @@ def call() {
 
                 sh 'zip -r ${component}-${TAG_NAME}.zip *'
 
-                sh 'curl -v -u admin:"S@ir&m1221" --upload-file ${component}-${TAG_NAME}.zip http://172.31.15.226:8081/repository/${component}-${TAG_NAME}.zip'
+                sh 'curl -v -u admin:"S@ir&m1221" --upload-file ${component}-${TAG_NAME}.zip http://172.31.15.226:8081/repository/${component}/${component}-${TAG_NAME}.zip'
             }
         }
         }
