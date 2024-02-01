@@ -8,7 +8,7 @@ def call() {
             if (env.TAG_NAME ==~ ".*") {
                 env.gitbranch = "refs/tags/${env.TAG_NAME}"
             } else {
-                env.gitbranch = "${env.TAG_NAME}"
+                env.gitbranch = "${env.BRANCH_NAME}"
             }
                 checkout scm: [$class: 'GitSCM', userRemoteConfigs: [[url: "https://github.com/sairm21/${env.component}"]], branches: [[name: gitbranch]]],poll: false
             }
